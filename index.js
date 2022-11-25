@@ -3,7 +3,7 @@ const bench = () =>
 		const startTime = Date.now();
 
 		const recurse = (i = 0) => {
-			if (i === 1000) {
+			if (i === 10000) {
 				res(Date.now() - startTime);
 				return;
 			}
@@ -11,6 +11,10 @@ const bench = () =>
 			setImmediate(() => {
 				recurse(i + 1);
 			});
+
+			if (i % 1000 === 0) {
+				console.log(i);
+			}
 		};
 		recurse();
 	});

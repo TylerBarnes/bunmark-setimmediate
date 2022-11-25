@@ -1,0 +1,12 @@
+{
+	"name": "bunmark",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"bench": "echo 'node setImmediate x 1000' && node index.js && echo 'bun setImmediate x 1000' && bun index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
